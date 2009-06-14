@@ -9,6 +9,8 @@ plugin 'sexy_scaffold',
 plugin 'make_resourceful',
 	:git => "git://github.com/hcatlin/make_resourceful.git"
 
+run "haml --rails ."
+
 plugin 'rspec',
   :git => 'git://github.com/dchelimsky/rspec.git'
 
@@ -35,7 +37,7 @@ commit('Initial commit')
 if yes?("Wanna use authentication?")
 	plugin 'restful-authentication',
 		:git => 'git://github.com/technoweenie/restful-authentication.git'
-	generate('authenticated','user_session')
+	generate('authenticated','user session')
 	commit('Added authentication')
 end
 
