@@ -4,10 +4,10 @@ def commit(message)
 end
 
 plugin 'sexy_scaffold',
-	:git => "git://github.com/dfischer/sexy_scaffold.git"
+	:git => "git://github.com/bezelga/sexy_scaffold.git"
 
-plugin 'make_resourceful',
-	:git => "git://github.com/hcatlin/make_resourceful.git"
+plugin 'resource_controller',
+	:git => "git://github.com/giraffesoft/resource_controller.git"
 
 run "haml --rails ."
 
@@ -16,6 +16,9 @@ plugin 'rspec',
 
 plugin 'rspec-rails',
 	  :git => 'git://github.com/dchelimsky/rspec-rails.git'
+
+plugin 'jrails',
+        :git => 'git://github.com/aaronchi/jrails.git'
 
 generate :rspec
 
@@ -32,7 +35,7 @@ config/database.yml
 db/*.sqlite3
 END
 
-commit('Initial commit')
+commit('Initial commit with plugins from template')
 
 if yes?("Wanna use authentication?")
 	plugin 'restful-authentication',
